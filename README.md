@@ -2,25 +2,19 @@
 PHP class for indexing SQL tables and basic ES php API operations
 
 # Usage examples
+`$es = new esClass();`
 
-`$es = new esClass();
-
-// Fetch
-
+## Fetch
 `$es->fetchSqlTable("database_host", "database_user", "database_pass", "database_name", "database_table");`
 	  	
-// Search
-
+## Search
 `$response = $es->search("index_name", "type_name", "regexp", "document", ".*");`
 	  	
-// Delete
-
+## Delete
 `$response = $es->delete("index_name", "type_name", "document_id");`
 	  	
-// Index
-
+## Index
 `$response = $es->index("index_name, "type_name", "document_id", $document_body_array);`
 	
-// Print response result  
-
+## Print response result  
 `print_r($response);`
